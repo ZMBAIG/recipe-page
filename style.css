@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap");
+
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+  --White: hsl(0, 0%, 100%);
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: auto;
+  background: var(--Eggshell);
+  font-size: 16px;
+  color: var(--Wenge-Brown);
+}
+.omelette-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  background: var(--White);
+  width: 700px;
+  margin-top: 4rem;
+  border-radius: 1rem;
+}
+.sub-omelette-wrapper {
+  padding: 2rem;
+}
+.sub-omelette-wrapper h1 {
+  font-family: "Young Serif", serif;
+  font-size: 2.5rem;
+  color: var(--Dark-Charcoal);
+  margin: 0.5rem 0;
+}
+.sub-omelette-wrapper h2 {
+  color: var(--Dark-Raspberry);
+  font-size: 1.15rem;
+}
+
+.preparation-time {
+  background: hsla(332, 76%, 80%, 0.1);
+  padding: 1rem;
+  border-radius: 6px;
+}
+.sub-preparation-time li::marker {
+  color: var(--Dark-Raspberry);
+}
+
+.sub-instruction li::marker {
+  color: var(--Nutmeg);
+  font-weight: 700;
+}
+ol {
+  border-bottom: 1px solid var(--Light-Grey);
+  padding-bottom: 1rem;
+}
+
+.instructions ol li {
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+.sub-instruction p,
+.sub-ingredients p,
+.preparation-time p {
+  margin-left: 0.75rem;
+}
+
+h3 {
+  color: var(--Nutmeg);
+  font-family: "Young Serif", serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.sub-ingredients li::marker {
+  color: var(--Nutmeg);
+}
+
+.omelette-wrapper img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  padding: 1.5rem;
+  padding-bottom: 0;
+}
+table {
+  width: 100%;
+}
+table,
+th,
+td {
+  border-bottom: 1px solid var(--Light-Grey);
+}
+tr td:nth-child(2) {
+  padding: 0.5rem 0;
+  color: var(--Nutmeg);
+  font-weight: 700;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 600px) {
+  .omelette-wrapper {
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    font-size: 14px;
+  }
+  .sub-omelette-wrapper {
+    padding-top: 0rem;
+  }
+  .omelette-wrapper img {
+    padding: 0;
+  }
+  .omelette-wrapper h1 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    text-align: left;
+  }
+}
